@@ -27,6 +27,10 @@ inoremap [ []<Left>
 inoremap ?? <?php<Space>
 inoremap ## /**<CR><Space>*<CR>*/<Space><CR>
 
+" omnicomplete
+filetype plugin on
+au FileType php set omnifunc=phpcomplete#CompletePHP
+
 " check php syntax  
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 
