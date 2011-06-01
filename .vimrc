@@ -21,13 +21,16 @@ set incsearch
 " temp files
 set directory=/tmp
 
-" insert mode remaps
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap ?? <?php<Space>
-inoremap ## /**<CR><Space>*<CR>*/<Space><CR>
+" normal mode mappings
+nmap <Space> i_<Esc>r
 
-" omnicomplete
+" insert mode mappings
+inoremap )) ()<Left>
+inoremap ]] []<Left>
+inoremap ?? <?php<Space>
+inoremap ## /**<CR><Space>*<CR>*/<Space><CR><Left>
+
+" php omnicomplete
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
