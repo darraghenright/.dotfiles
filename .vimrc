@@ -7,12 +7,23 @@ set nowrap
 set number
 set showmatch
 set visualbell
+set background=dark 
+
+" solarized options 
+let g:solarized_termcolors=256 
+let g:solarized_visibility="high" 
+let g:solarized_contrast="high" 
+colorscheme solarized
 
 " indentation/formatting
 set smartindent
 set expandtab
+
 set tabstop=4
 set shiftwidth=4
+
+au FileType yaml set tabstop=2
+au FileType yaml set shiftwidth=2
 
 " search
 set hlsearch
