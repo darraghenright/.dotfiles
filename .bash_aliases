@@ -1,0 +1,5 @@
+alias ll='ls -al'
+alias svn='colorsvn'
+alias www='cd /Library/WebServer/Documents'
+alias desk='cd ~/Desktop'
+alias c='[[ -f ./app/console ]] && ./app/console'
