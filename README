@@ -1,0 +1,9 @@
+class Person(object):
+    '''\
+    Just testing GitHub's new browser
+    edit-in-place functionality. It rocks :)
+    '''
+
+    def __init__(self, name):
+        self.name = name
+
