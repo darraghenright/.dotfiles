@@ -8,6 +8,7 @@ set number
 set showmatch
 set visualbell
 set background=dark 
+set cursorline
 
 " solarized options 
 let g:solarized_termcolors=256 
@@ -22,8 +23,12 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
-au FileType yaml set tabstop=2
-au FileType yaml set shiftwidth=2
+" indentation overrides
+au FileType ruby,yaml set tabstop=2
+au FileType ruby,yaml set shiftwidth=2
+
+" twig syntax highlighting
+au BufRead,BufNewFile *.twig set syntax=html
 
 " search
 set hlsearch
@@ -35,9 +40,13 @@ set directory=/tmp
 " normal mode mappings
 nmap <Space> i_<Esc>r
 
+" templates
+au BufNewFile *.php  r ~/.vim/skeleton/skeleton.php
+au BufNewFile *.html r ~/.vim/skeleton/skeleton.html
+
 " insert mode mappings
-inoremap )) ()<Left>
-inoremap ]] []<Left>
+"inoremap )) ()<Left>
+"inoremap ]] []<Left>
 inoremap ?? <?php<Space>
 inoremap ## /**<CR><Space>*<CR>*/<Space><CR><Left>
 
